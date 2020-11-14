@@ -28,7 +28,24 @@ class App extends React.Component {
       calc: "0",
       operation: undefined,
     };
-    // this.handleClick = this.handleClick.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick(ev) {
+    console.log(ev.target.innerHTML);
+    const calc = this.state.calc;
+    const keyText = ev.target.innerHTML;
+    switch (keyText) {
+      case "AC":
+        this.setState({
+          calc: "0",
+        });
+        break;
+      case "=":
+        const result = eval(calc);
+        this.setState({
+          calc: result,
+        });
+    }
   }
   render() {
     const numberKeys = numbers.map((item) => (
