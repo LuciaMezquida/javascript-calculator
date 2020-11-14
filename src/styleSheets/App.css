@@ -1,3 +1,79 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: #a3b18a;
+  font-family: "Trebuchet MS";
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  width: 270px;
+  height: 400px;
+  background-color: #588157;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 10px;
+}
+
+.display {
+  width: 100%;
+  height: 60px;
+  text-align: right;
+  color: #dad7cd;
+  background-color: #3a5a40;
+  padding: 10px;
+  margin: 0 7px 15px 7px;
+  font-size: 30px;
+  position: relative;
+}
+
+.btn {
+  color: #dad7cd;
+  background-color: #344e41;
+  border-radius: 20px;
+  margin: 3px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:active {
+  opacity: 0.7;
+  transform: scale(0.9);
+}
+
+.btn.orange {
+  background-color: #ff8600;
+  color: #344e41;
+}
+
+.big-h {
+  width: 110px;
+}
+
+.ac {
+  background-color: #a3b18a;
+  color: #344e41;
+  width: 90%;
+}
+
+.nums-container {
+  width: 75%;
+}
+
+.ops-container {
+  width: 25%;
 }

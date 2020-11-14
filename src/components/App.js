@@ -32,12 +32,12 @@ class App extends React.Component {
   }
   render() {
     const numberKeys = numbers.map((item) => (
-      <button onClick={this.handleClick} className="num-button" key={item}>
+      <button onClick={this.handleClick} className={item === 0 ? "big-h btn" : "btn"} key={item}>
         {item}
       </button>
     ));
     const operationKeys = operations.map((item, index) => (
-      <button onClick={this.handleClick} className="op-button" key={index}>
+      <button onClick={this.handleClick} className="btn orange" key={index}>
         {item}
       </button>
     ));
@@ -47,17 +47,17 @@ class App extends React.Component {
           {this.state.calc}
         </div>
         <div className="nums-container">
-          <button className="ac big-h" onClick={this.handleClick} id="clear">
+          <button className="btn ac big-h" onClick={this.handleClick} id="clear">
             AC
           </button>
           {numberKeys}
-          <button onClick={this.handleClick} id="decimal">
+          <button className="btn" onClick={this.handleClick} id="decimal">
             .
           </button>
         </div>
         <div className="ops-container">
           {operationKeys}
-          <button className="orange" onClick={this.handleClick} id="equals">
+          <button className="orange btn" onClick={this.handleClick} id="equals">
             =
           </button>
         </div>
