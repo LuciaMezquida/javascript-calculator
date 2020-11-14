@@ -41,6 +41,7 @@ class App extends React.Component {
         });
         break;
       case "=":
+        //https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/eval
         const result = eval(calc);
         this.setState({
           calc: result,
