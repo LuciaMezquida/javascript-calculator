@@ -28,8 +28,14 @@ class App extends React.Component {
       calc: "0",
       operation: undefined,
     };
+    // this.handleClick = this.handleClick.bind(this);
   }
   render() {
+    const numberKeys = numbers.map((item) => (
+      <button onClick={this.handleClick} className="num-button" key={item}>
+        {item}
+      </button>
+    ));
     return (
       <div className="calculator">
         <div id="display" className="display">
@@ -39,7 +45,7 @@ class App extends React.Component {
           <button className="ac big-h" onClick={this.handleClick} id="clear">
             AC
           </button>
-
+          {numberKeys}
           <button onClick={this.handleClick} id="decimal">
             .
           </button>
