@@ -36,6 +36,11 @@ class App extends React.Component {
         {item}
       </button>
     ));
+    const operationKeys = operations.map((item, index) => (
+      <button onClick={this.handleClick} className="op-button" key={index}>
+        {item}
+      </button>
+    ));
     return (
       <div className="calculator">
         <div id="display" className="display">
@@ -51,6 +56,7 @@ class App extends React.Component {
           </button>
         </div>
         <div className="ops-container">
+          {operationKeys}
           <button className="orange" onClick={this.handleClick} id="equals">
             =
           </button>
